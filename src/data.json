@@ -1,26 +1,20 @@
-    [
-        {
-          "id": "1",
-          "title": "first",
-          "desc":
-            "description",
-          "img":
-            "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-        },
-        {
-          "id": "2",
-          "title": "second",
-          "desc":
-            "description",
-          "img":
-            "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-        },
-        {
-          "id": "3",
-          "title": "third",
-          "desc":
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-          "img":
-            "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-        }
-      ]
+[
+  {
+    "id": "1",
+    "title": "first",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in porttitor risus. Nullam non metus ut nulla faucibus posuere. In sit amet consectetur nisi. Nam lacus purus, iaculis vitae dolor vel, convallis lacinia enim. Vestibulum dui neque, consectetur in mauris at, faucibus sodales tellus.",
+    "background-image": "https://media.istockphoto.com/id/1289085646/vector/holiday-abstract-shiny-color-gold-design-element.jpg"
+  },
+  {
+    "id": "2",
+    "title": "second",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in porttitor risus. Nullam non metus ut nulla faucibus posuere. In sit amet consectetur nisi. Nam lacus purus, iaculis vitae dolor vel, convallis lacinia enim. Vestibulum dui neque, consectetur in mauris at, faucibus sodales tellus.",
+    "background-image": "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1016-c-08_1-ksh6mza3.jpg"
+  },
+  {
+    "id": "3",
+    "title": "third",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in porttitor risus. Nullam non metus ut nulla faucibus posuere. In sit amet consectetur nisi. Nam lacus purus, iaculis vitae dolor vel, convallis lacinia enim. Vestibulum dui neque, consectetur in mauris at, faucibus sodales tellus.",
+    "background-image": "https://images.unsplash.com/photo-1553095066-5014bc7b7f2d"
+  }
+]
