@@ -1,7 +1,11 @@
+//import useStrapiData from '../../hooks/useFetch'
 import './Slide.css'
 
 
 function Slide(props) {
+
+    
+
     return (
         <section className="u-clearfix u-shading u-section-1" style={{backgroundImage: `url(${props.img})`}}>
             <div className="u-clearfix u-sheet-1">

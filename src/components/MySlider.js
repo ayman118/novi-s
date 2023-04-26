@@ -1,44 +1,36 @@
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-import Slide from './Slide/Slide'
+import Slide from './Slide/Slide';
+//import data from '../data.json'
+import useStrapiData from '../hooks/useFetch';
+import {isEmpty} from 'lodash'
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-export const media = [
-    {
-        children: <Slide
-            title="Sample Headline 1"
-            desc="dsadasnskljanfsljdfnklkfnLAKFNNFKLlksnLCNNsdlnsDKNDkndNLKSDSNsnklndKLDSNKLDDSDSmdskasksMDñdmsaLSMDsdaasdNDKLdnkDkmdsdsaasdasdSN"
-            img="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000"
-        />
-    },
-    {
-        children: <Slide
-            title="Sample Headline 2"
-            desc="dsadasnskljanfsljdfnklkfnLAKFNNFKLlksnLCNNsdlnsDKNDkndNLKSDSNsnklndKLDSNKLDDSDSmdskasksMDñdmsaLSMDsdaasdNDKLdnkDkmdsdsaasdasdSN"
-            img="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000"
-        />
-    },
-    {
-        children: <Slide
-            title="Sample Headline 3"
-            desc="dsadasnskljanfsljdfnklkfnLAKFNNFKLlksnLCNNsdlnsDKNDkndNLKSDSNsnklndKLDSNKLDDSDSmdskasksMDñdmsaLSMDsdaasdNDKLdnkDkmdsdsaasdasdSN"
-            img="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000"
-        />
-    },
-]
-
 export default function MySlider() {
+const data = useStrapiData('http://localhost:1337/api/sliders') 
+      
+
+    const media = data?.map((item)=> (
+    {
+        children: <Slide
+            title={item.attributes.title}
+            desc={item.attributes.desc}
+            img={item.backgroundimage}
+        />
+    })
+)
     return (
         <AutoplaySlider
             media={media}
             play={true}
             cancelOnInteraction={false}
-            interval={3000}
+            interval={1000}
             fillParent={true}
             bullets={false}
             organicArrows={false}
         />
     );
 }
+
