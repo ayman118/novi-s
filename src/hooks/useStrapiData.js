@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 
-const useStrapiData = (endpoint) => {
+const useStrapiData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(endpoint);
+        const response = await fetch('http://localhost:1337/api/sliders?populate=*');
         const json = await response.json();
-        console.log(json)
         setData(json.data);
       } catch (error) {
         console.error(error);
@@ -16,7 +15,7 @@ const useStrapiData = (endpoint) => {
     };
 
     fetchData();
-  }, [endpoint]);
+  }, []);
 
   return data;
 };
